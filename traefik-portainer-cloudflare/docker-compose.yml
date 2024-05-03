@@ -31,7 +31,7 @@ services:
       - web # <== Placing traefik on the network named web, to access containers on this network
     labels:
       - "traefik.enable=true" # <== Enable traefik on itself to view dashboard and assign subdomain to$
-      - "traefik.http.routers.api.rule=Host(`traefik.nasticks.me`)" # <== Setting the domain for the d$
+      - "traefik.http.routers.api.rule=Host(`traefik.votredomaine.me`)" # <== Setting the domain for the d$
       - "traefik.http.routers.api.service=api@internal" # <== Enabling the api to be a service to acce$
    
   portainer:
@@ -45,7 +45,7 @@ services:
       - web
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.portainer.rule=Host(`portainer.nasticks.me`)"
+      - "traefik.http.routers.portainer.rule=Host(`portainer.votredomaine.me`)"
       - "traefik.http.services.portainer.loadbalancer.server.port=9000"
    
 networks:
